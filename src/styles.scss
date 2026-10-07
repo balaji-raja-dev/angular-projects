@@ -1,1 +1,169 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #f4f6fa;
+    color: #1c2430;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.topbar {
+    background: #1d4ed8;
+    color: #fff;
+    padding: 14px 20px;
+    font-weight: 600;
+}
+
+.container {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 0 16px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .08);
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    align-items: end;
+}
+
+.filters {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+input,
+select {
+    padding: 8px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.btn {
+    background: #1d4ed8;
+    color: #fff;
+    border: 0;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn:hover {
+    background: #1e40af;
+}
+
+.errors {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    color: #b91c1c;
+}
+
+.flight {
+    display: grid;
+    grid-template-columns: 1.2fr 1.5fr 1fr 1fr;
+    gap: 12px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.flight:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .15);
+}
+
+.price {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: right;
+}
+
+.muted {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.msg {
+    padding: 16px;
+    text-align: center;
+}
+
+.msg.error {
+    background: #fee2e2;
+    color: #991b1b;
+    border-radius: 8px;
+}
+
+.spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #cbd5e1;
+    border-top-color: #1d4ed8;
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+    vertical-align: middle;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.details dl {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    gap: 8px;
+}
+
+.details dt {
+    color: #64748b;
+}
+
+.details dd {
+    margin: 0;
+}
+
+.back {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #1d4ed8;
+}
+
+@media (max-width: 640px) {
+    .flight {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .price {
+        text-align: left;
+    }
+}
